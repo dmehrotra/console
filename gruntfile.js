@@ -41,7 +41,7 @@ module.exports = function(grunt){
                     compress: false
                 },
                 files: {
-                    'js/app.min.js': ['src/js/vendor/jquery-1.7.1.min.js','src/js/vendor/jquery-mousewheel.min.js','src/js/vendor/terminal.js','src/js/vendor/dterm.js','src/js/utilities/*.js', 'src/js/*.js']
+                    'js/app.min.js': ['src/js/vendor/jquery-1.7.1.min.js','src/js/vendor/jquery-mousewheel.min.js','src/js/vendor/terminal.js','src/js/vendor/dterm.js','src/js/vendor/underscore.min.js','src/js/utilities/*.js', 'src/js/*.js']
                 }
             },
             build: {

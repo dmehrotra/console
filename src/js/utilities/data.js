@@ -1,41 +1,44 @@
 'use strict'
-function SystemData(){
+function Data(){
 	this.data = json;
 }
 var json = [
 {
   "type":'file',
   "name":"hello.txt",
-  "level":0
+  "path":"/hello.txt"
 },
 {
   "type": 'folder',
   "name": 'parents',
-  "level": 0,
+  "path": '/parents',
   "files":[
   {
     "name":"parents.txt",
-    "level": 1
+    "path":"/parents/parents.txt",
+    "content":"We are your parents"
   }
   ],
   "folders":[
   {
     "name":"mom",
-    "level":1,
+    "path":"/parents/mom",
     "files":[
     {
       "name":"mom.txt",
-      "level":2
+      "path":"/parents/mom/mom.txt",
+      "content":"I am Your Mommy"
     }
     ],
   },
   {
     "name":"dad",
-    "level":1,
+    "path":"/parents/dad",
     "files":[
     {
       "name":"dad.txt",
-      "level": 2
+      "path": "/parents/dad/dad.txt",
+      "content":"I am Your Daddy"
     }
     ]
   }

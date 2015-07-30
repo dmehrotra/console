@@ -1,9 +1,9 @@
 "use strict";
 
-function File(name,level){
+function File(name,path,content){
 	this.name = name;
-	this.level = level || 0;
-	this.content = null;
+	this.path = path || "/"+this.name;
+	this.content = content || null;
 }
 
 File.prototype.setContent = function(content){

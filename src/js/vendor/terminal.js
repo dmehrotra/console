@@ -3718,7 +3718,7 @@
                     var cols = self.cols();
                     var i = cols < 15 ? null : cols < 35 ? 0 : cols < 55 ? 1 : cols < 64 ? 2 : cols < 75 ? 3 : 4;
                     if (i !== null) {
-                        return signatures[i].join('\n') + '\n';
+                        return 'teri.link';
                     } else {
                         return '';
                     }

@@ -1,9 +1,25 @@
 'use strict'
 
-var data = new SystemData(); 
+var data = new Data(); 
 var fs = new FileSystem();
+var me = new Session();
+var teri = new Interface(fs,me);
 $(document).ready(function(){
-	fs.build(data);
+	fs.build(data,function(){
+		fs.paths = fs.getPaths();
+	});
+
+	$('body').terminal(function(command, term) {
+		var cmd = command.split(' ')[0];
+		var arg = command.split(' ')[1];
+		var input = teri.find_command(cmd,arg);
+		if (input != false){
+			term.echo(input);
+		}else{
+			term.echo('command not found: '+cmd);
+		}
+		term.set_prompt("> "+me.location.slice(1)+'  ');
+	});
 });
 
 
