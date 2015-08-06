@@ -41,6 +41,15 @@ FileSystem.prototype.getPaths = function(){
 	});
 	return paths;
 }
+FileSystem.prototype.getFile = function(file){
+    files = [];
+    this.getAttribute(this, 'files', function(obj) {
+        files.push(obj)
+    });
+    file = _.findWhere(_.flatten(files), {name: file});
+    return file;
+}
+
 FileSystem.prototype.getAttribute = function(obj, lookup, callback) {
     for (property in obj) {
         if (property == lookup) {

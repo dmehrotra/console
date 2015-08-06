@@ -13,12 +13,13 @@ $(document).ready(function(){
 		var cmd = command.split(' ')[0];
 		var arg = command.split(' ')[1];
 		var input = teri.find_command(cmd,arg);
-		if (input != false){
-			term.echo(input);
+		if (input != false && input != undefined){
+			if (input != true){term.echo(input);}
 		}else{
 			term.echo('command not found: '+cmd);
 		}
-		term.set_prompt("> "+me.location.slice(1)+'  ');
+		
+		term.set_prompt("> "+teri.config_pwd()+'  ');
 	});
 });
 

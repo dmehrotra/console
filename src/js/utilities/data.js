@@ -6,7 +6,13 @@ var json = [
 {
   "type":'file',
   "name":"hello.txt",
-  "path":"/hello.txt"
+  "path":"/hello.txt",
+  "content": "hello world"
+},
+{
+  "type":'file',
+  "name":"hello2.txt",
+  "path":"/hello2.txt",
 },
 {
   "type": 'folder',
@@ -28,7 +34,13 @@ var json = [
       "name":"mom.txt",
       "path":"/parents/mom/mom.txt",
       "content":"I am Your Mommy"
+    },
+    {
+      "name":"mom2.txt",
+      "path":"/parents/mom/mom2.txt",
+      "content":"I am Your Mommy2"
     }
+
     ],
   },
   {
