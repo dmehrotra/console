@@ -29,6 +29,16 @@ var json = [
   {
     "name":"mom",
     "path":"/parents/mom",
+    "folders":[
+      {
+        "name":"son",
+        "path":"/parents/mom/son"
+      },
+      {
+        "name":"daughter",
+        "path":"/parents/mom/daughter"
+      },
+    ],
     "files":[
     {
       "name":"mom.txt",

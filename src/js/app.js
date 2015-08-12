@@ -10,6 +10,7 @@ $(document).ready(function(){
 	});
 
 	$('body').terminal(function(command, term) {
+		
 		var cmd = command.split(' ')[0];
 		var arg = command.split(' ')[1];
 		var input = teri.find_command(cmd,arg);
@@ -18,7 +19,7 @@ $(document).ready(function(){
 		}else{
 			term.echo('command not found: '+cmd);
 		}
-		
+		console.log(me.location);	
 		term.set_prompt("> "+teri.config_pwd()+'  ');
 	});
 });

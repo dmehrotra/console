@@ -31,6 +31,11 @@ Interface.prototype.cd = function(arg){
 		return true;
 	}
 	if (arg == '../'){
+		the_arr = this.session.location.split('/');
+	    arg = the_arr[the_arr.length - 2];
+	  	
+	  	this.session.location = _.without(the_arr, arg).join('/');
+		return true;
 		// snot yet
 		// this.session.location.split('/');
 		// if (this.session.location.split('/').length - 3] != undefined){
@@ -88,8 +93,9 @@ Interface.prototype.view = function(arg){
 	}
 	
 }
-Interface.prototype.possible_paths = function(){
-	var count = this.session.location.match(/\//ig).length;
+Interface.prototype.possible_paths = function(back){
+	var back = back || 0
+	var count = this.session.location.match(/\//ig).length - back;
 	var possible_paths = _.map(this.fs.paths, function(path){ 
 		if (path.match(/\//ig).length == count){
 			return path
