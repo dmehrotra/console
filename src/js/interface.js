@@ -91,7 +91,6 @@ Interface.prototype.view = function(arg){
 	}else{
 		return arg + ' is not a file'
 	}
-	
 }
 Interface.prototype.possible_paths = function(back){
 	var back = back || 0
